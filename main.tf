@@ -33,6 +33,7 @@ data "template_file" "user_data" {
 resource "aws_security_group" "alb_sg" {
   name        = "my-alb-security-grp"
   vpc_id      = module.vpc.vpc_id
+  description = "Load balancer security group"
 
   ingress {
     description = "Http"
